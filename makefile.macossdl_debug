@@ -485,6 +485,8 @@ XMAMEROOT = $(PREFIX)/share/x$(TARGET)
 # Architecture; choose your CPU (only one!!) 
 ###########################################################################
 
+MY_CPU = arm64
+
 # i386, GNU asm
 # MY_CPU = i386
 
@@ -492,7 +494,7 @@ XMAMEROOT = $(PREFIX)/share/x$(TARGET)
 # understand gcc's inline assembly syntax, though you may still enable 
 # X86_ASM_68000, etc., which are assembled by NASM.  You may also need to 
 # use this for BeOS.
-MY_CPU = i386_noasm
+# MY_CPU = i386_noasm
 
 # IA64
 # MY_CPU = ia64
@@ -518,7 +520,7 @@ MY_CPU = i386_noasm
 ###########################################################################
 
 # Linux 
-ARCH  = linux
+# ARCH  = linux
 
 # FreeBSD
 # ARCH  = freebsd
@@ -532,8 +534,8 @@ ARCH  = linux
 # Solaris/SunOS
 # ARCH  = solaris
 # For Solaris, add paths where other stuff is; libjpeg and so on...
-# CFLAGS += -I/usr/local/include -I/usr/sfw/include 
-# LDFLAGS += -L/usr/local/lib -L/usr/sfw/lib
+CFLAGS += -I/usr/local/include -I/opt/homebrew/include
+LDFLAGS += -L/usr/local/lib -L/opt/homebrew/lib
 
 # QNX Neutrino (QNX4/QNX6)
 # ARCH = nto
@@ -542,7 +544,7 @@ ARCH  = linux
 # ARCH  = next
 
 # OpenStep on Apple systems (Cocoa)
-# ARCH  = macosx
+ARCH = macosx
 
 # IRIX (with sound requires the dmedia package) (*)
 # ARCH  = irix
