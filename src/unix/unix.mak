@@ -19,6 +19,7 @@ CFLAGS.m68k       =
 CFLAGS.risc       = -DALIGN_INTS -DALIGN_SHORTS 
 CFLAGS.risc_lsb   = -DALIGN_INTS -DALIGN_SHORTS -DLSB_FIRST
 CFLAGS.mips       = -DALIGN_INTS -DALIGN_SHORTS -DSGI_FIX_MWA_NOP
+CFLAGS.arm64      = -DLSB_FIRST
 
 ##############################################################################
 # **** Architecture dependent settings.
